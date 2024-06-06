@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root{
+    --soft_orange:hsl(35, 77%, 62%);
+    --soft_red:hsl(5, 85%, 63%);
+    --off_White:hsl(36, 100%, 99%);
+    --grayish_blue: hsl(233, 8%, 79%);
+    --dark_grayish_blue: hsl(236, 13%, 42%);
+    --very_dark_blue: hsl(240, 100%, 5%);
+}
+
+
+*{
+    padding: 0px;
+    margin:0px;
+    font-family: "Inter",Arial, Helvetica, sans-serif;
+}
+
+body,html{
+    background-color: var(--off_White);
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    
+}
+
+.headerContents{
+    height: 100%;
+    margin: 0px 0px 0px 10px;
+    background: url(../assets/images/logo.svg) left center no-repeat;
+    display: flex;
+    justify-content: right;
+}
+
+
+.sideNavBar{
+    height: 100%;
+    width: 90px;
+}
+
+.sideNavBarIcon{
+    width: 100%;
+    height: 100%;
+    background: url(../assets/images/icon-menu.svg) center center no-repeat;
+    cursor: pointer;
+}
+
+.sideNavBar .sideNavBarLinks{
+    display: none;
+}
+
+.openSideNavBar{
+    width: 60%/*290px*/ ;
+    height: 100vh;
+    z-index: 1;
+    position: fixed;
+    background-color: var(--off_White);
+    display: inline-flex;
+    flex-direction: column;
+    transition: all ease-out 1s;
+}
+
+.openSideNavBar::before{
+    content: "";
+    z-index: 1;
+    width: 40%/*193px*/;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.404);
+    position: fixed;
+    transform: translateX(/*-199px*/ -100%);
+    transition: all ease-in-out 2s;
+}
+
+
+.openSideNavBar .sideNavBarIcon{
+    width: 90px;
+    height: 60px;
+    margin:20px 0px 10px 0px;
+    background: url(../assets/images/icon-menu-close.svg) center center no-repeat ;
+    position: relative;
+    left:73%;
+}
+
+.openSideNavBar .sideNavBarLinks{
+    display: block;
+}
+
+.openSideNavBar a{
+    margin: 30px 20px 0px 30px;
+    font-size: 1.2em;
+    font-weight:500;
+    display: flex;
+    text-decoration: none;
+    color: var(--very_dark_blue);
+}
+
+.openSideNavBar a:hover{
+    color: var(--soft_red);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.mainSection{
+    padding: 15px; 
+}
+
+.mainNewsImage{
+    width: 100%;
+    height: 400px;
+    background:url(../assets/images/image-web-3-mobile.jpg) center center no-repeat ;
+    background-size: cover;
+}
+
+.mainNewsContents h1{
+    color: var(--very_dark_blue);
+    font-size: 3.4em;
+    margin-top: 40px ;
+}
+
+.mainNewsContents p{
+    color: var(--dark_grayish_blue);
+    margin-top: 16px ;
+    font-size: 1.3em;
+}
+
+.mainNewsContents button{
+    font-size: 1.2em;
+    font-weight:800;
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    margin: 40px 0px;
+    color: var(--very_dark_blue);
+    background-color: var(--soft_red);
+    border: none;
+    letter-spacing: 6px;
+    
+}
+
+button:hover{
+    background-color: var(--off_White);
+    color: var(--soft_red);
+    border: 3px solid var(--soft_red);
+}
+
+/*.mainNewsContents button >a{
+    text-decoration: none;
+}*/
+
+.news{
+    background-color: var(--very_dark_blue);
+    margin: 30px 0px;
+    padding: 10px;
+}
+
+.news h1{
+    font-size: 2.5em;
+    margin: 10px;
+    color: var(--soft_orange);
+    cursor: pointer;
+}
+
+.news h1:hover{
+    color: var(--off_White);
+}
+
+.news h2{
+    font-size: 1.7em;
+    margin: 30px 10px 20px 10px;
+    color: var(--off_White);
+    cursor: pointer;
+}
+
+.news h2:hover{
+    color: var(--soft_orange);
+}
+
+.news p{
+    font-size: 1.2em;
+    margin: 20px 20px 30px 10px;
+    color: var(--grayish_blue);
+}
+
+hr{
+    margin: 10px;
+    opacity: 40%;
+}
+
+.popularNews{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstPopularNewsImage{
+    width:10rem;
+    height: 150px;
+    background: url(../assets/images/image-retro-pcs.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.secondPopularNewsImage{
+    width: 9rem/*175px*/;
+    height: 150px;
+    background: url(../assets/images/image-top-laptops.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.thirdPopularNewsImage{
+    width: 10rem /*38% 195px*/;
+    height: 150px;
+    background: url(../assets/images/image-gaming-growth.jpg) center center no-repeat;
+    background-size: cover;
+    
+}
+
+.firstPopularNews,.secondPopularNews,.thirdPopularNews{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+
+
+.firstPopularNews h1,.secondPopularNews h1,.thirdPopularNews h1{
+    color: var(--soft_red);
+    font-size: 2em;
+    margin: 20px 0px 0px 10px;
+
+}
+
+.firstPopularNews h2,.secondPopularNews h2,.thirdPopularNews h2{
+    color: var(--very_dark_blue);
+    font-size: 1.6em; 
+    margin: 10px;
+    cursor:  pointer;
+}
+
+.firstPopularNews h2:hover,.secondPopularNews h2:hover,.thirdPopularNews h2:hover{
+    color: var(--soft_red);
+}
+
+.firstPopularNews p{
+    color: var(--dark_grayish_blue);
+    font-size: 1.3em;
+    margin: 10px 0px 20px 10px;
+    padding-bottom: 10px;
+}
+.secondPopularNews p,.thirdPopularNews p{
+    color: var(--dark_grayish_blue);
+    font-size: 1.4em;
+    margin: 10px ;
+    padding-bottom: 10px;
+}
+
+footer{
+    margin: 40px 10px;
+    color: var(--dark_grayish_blue);
+    text-align: center;
+}
+
+.attribution a{
+    font-weight: 500;
+    text-decoration:none;
+    color: var(--very_dark_blue);
+}
+
+.attribution a:hover{
+    text-decoration: underline;
+    color: var(--soft_red);
+}
