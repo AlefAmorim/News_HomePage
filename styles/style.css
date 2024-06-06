@@ -54,7 +54,7 @@ header{
 }
 
 .openSideNavBar{
-    width: 60%/*290px*/ ;
+    width: 60%;
     height: 100vh;
     z-index: 1;
     position: fixed;
@@ -67,11 +67,11 @@ header{
 .openSideNavBar::before{
     content: "";
     z-index: 1;
-    width: 40%/*193px*/;
+    width: 40%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.404);
     position: fixed;
-    transform: translateX(/*-199px*/ -100%);
+    transform: translateX(-100%);
     transition: all ease-in-out 2s;
 }
 
@@ -150,10 +150,6 @@ button:hover{
     border: 3px solid var(--soft_red);
 }
 
-/*.mainNewsContents button >a{
-    text-decoration: none;
-}*/
-
 .news{
     background-color: var(--very_dark_blue);
     margin: 30px 0px;
@@ -207,14 +203,14 @@ hr{
 }
 
 .secondPopularNewsImage{
-    width: 9rem/*175px*/;
+    width: 9rem;
     height: 150px;
     background: url(../assets/images/image-top-laptops.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .thirdPopularNewsImage{
-    width: 10rem /*38% 195px*/;
+    width: 10rem;
     height: 150px;
     background: url(../assets/images/image-gaming-growth.jpg) center center no-repeat;
     background-size: cover;
