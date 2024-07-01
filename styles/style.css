@@ -131,23 +131,25 @@ main{
 }
 
 .mainNewsContents button{
+    border:2px solid var(--soft_red);
+    color:var(--very_dark_blue);
+    background-image: linear-gradient(45deg,var(--off_White) 50%,var(--soft_red) 50%);
+    background-position: 100%;
+    background-size:400%;
     font-size: 1.2em;
     font-weight:800;
     width: 250px;
     height: 60px;
     cursor: pointer;
     margin: 40px 0px;
-    color: var(--very_dark_blue);
-    background-color: var(--soft_red);
-    border: none;
+    /*color: var(--very_dark_blue);
+    background-color: var(--soft_red);*/
     letter-spacing: 6px;
-    
+    transition:background ease-in-out 1s;
 }
 
 button:hover{
-    background-color: var(--off_White);
-    color: var(--soft_red);
-    border: 3px solid var(--soft_red);
+    background-position: 0;
 }
 
 .news{
